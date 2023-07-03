@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5822997659169558378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5822997659169558381}
+  - component: {fileID: 5822997659169558380}
+  - component: {fileID: 5822997659169558379}
+  - component: {fileID: 5822997659169558382}
+  - component: {fileID: 5822997659169558383}
+  m_Layer: 0
+  m_Name: ShooterNetworkManager_ShooterMelee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5822997659169558381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822997659169558378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5822997659169558380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822997659169558378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e740c2ef75c1e124d828339f118c76da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  runInBackground: 1
+  autoStartServerBuild: 1
+  serverTickRate: 60
+  offlineScene: Assets/CBGames/EasyMultiplayer-Invector/Shooter/Scenes/MAIN_ShooterMelee.unity
+  onlineScene: 
+  transport: {fileID: 5822997659169558379}
+  networkAddress: localhost
+  maxConnections: 100
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 5243104548622015552, guid: d52a8dc35176d82489fb5eca183909ac,
+    type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
+  spawnPrefabs:
+  - {fileID: 4915090510530712850, guid: f2e11887aea18154abf2f0acc8630c70, type: 3}
+  - {fileID: 6231280945557893572, guid: 91a18ab60749c6149822a7246b155146, type: 3}
+  - {fileID: 174278234762124595, guid: dd1a061832e5d394ebf4e6a18132caf3, type: 3}
+  - {fileID: 6220882761758059412, guid: 7c64cc1f894449845a826ba121929ca3, type: 3}
+  - {fileID: 5800637872406050258, guid: 4410a615f02b5f442bfd1133271c9c7d, type: 3}
+  - {fileID: 3076599666582598074, guid: 80c6b1ff3e9d5f8449fae40726e9995a, type: 3}
+  - {fileID: 7465245305276301853, guid: 8948203a190f2054ba95fed50d264159, type: 3}
+  - {fileID: 607256129116566335, guid: 78633798fcde1ed4fb2a937a6e9d9b94, type: 3}
+  - {fileID: 5671553696227533812, guid: 52ed4eb742a30d94ab7223866fabb9b5, type: 3}
+  - {fileID: 4228439019918282353, guid: 3e9e2f2eaf1313b4ca8faad66d58a605, type: 3}
+  - {fileID: 6102003535421748705, guid: 2c6e778543be8f24bb9a0d6a50dd5164, type: 3}
+  - {fileID: 4849918669228445803, guid: e3cec6a7ffadc0a4f9da3b23f3b4c294, type: 3}
+  - {fileID: 3725642866917520739, guid: a69ccd2e77b341742a769763c4feaadf, type: 3}
+  - {fileID: 5846131167883883315, guid: 599ba4a41fc777b498156be8617418b1, type: 3}
+  - {fileID: 839575221530241234, guid: 22f801c989616724e935947257248a10, type: 3}
+  - {fileID: 6093890423140408511, guid: 70ef9b1b0c560324c9e8b7d955537475, type: 3}
+  - {fileID: 4873148929104748679, guid: be2a9a01e65cbb64e870478d2f3a9720, type: 3}
+  - {fileID: 2035836342136078268, guid: aae486a6767a1d545b60dd5a4ad2911e, type: 3}
+  - {fileID: 6611347082386298627, guid: 4f2c3e1718ac9f14b8c8b7d8cc0c7761, type: 3}
+  - {fileID: 170736, guid: c1394f20ee0c360439a1ede528467d0c, type: 3}
+  - {fileID: 6513518814600286406, guid: 0b71f080747bf3e489b46afad253d557, type: 3}
+  - {fileID: 8361893820001500290, guid: 3c869bceb4ed50b4faa51c3ef2b74ce0, type: 3}
+  - {fileID: 6225086445765088560, guid: 84d9b41d9e033eb46b3a6cb7d693c06b, type: 3}
+  - {fileID: 2160435645053587627, guid: 7448d0285e4700148be1a6dc1cfdf9de, type: 3}
+  - {fileID: 137011806112073272, guid: b3463c9f1d6770c46a2f15cbae6489a7, type: 3}
+  - {fileID: 8087162172079336178, guid: 6f6fbcc7d433ca3448dd3d3a0b68b33c, type: 3}
+  - {fileID: 4590921405528049911, guid: 8c08090db237e3e428e9561b626e000d, type: 3}
+  - {fileID: 7731195542506033503, guid: 808cab78b71f8cd4188cfd48c482e466, type: 3}
+  - {fileID: 7447272708328136181, guid: 78efc5fee67e94e4581c8ac81b607ea5, type: 3}
+  - {fileID: 7830863122091735173, guid: 10c07f636ecccd1458ec53ae25c93022, type: 3}
+  - {fileID: 6347506123085932211, guid: f2cd152715dc1d74d9776639162be669, type: 3}
+  - {fileID: 1000012655258636, guid: 4133fdfaedb293d4e9acf8ee94be5348, type: 3}
+  characterToSpawn: {fileID: 4915090510530712850, guid: f2e11887aea18154abf2f0acc8630c70,
+    type: 3}
+  _teams: {fileID: 11400000, guid: 71e5e5036753a794abad747fd2411ed1, type: 2}
+  characterTeam: blue
+  autoSpawnCharacter: 1
+  debugWindow: 1
+  verboseLogging: 0
+  additivelyLoadScenesOnJoin: []
+  moveToSceneOnJoin: Assets/CBGames/EasyMultiplayer-Invector/Shooter/Scenes/ExampleScenes/MP_Invector_ShooterMelee.unity
+  jumpToPointName: StartingJumpToPoint
+--- !u!114 &5822997659169558379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822997659169558378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Port: 7777
+  DualMode: 1
+  NoDelay: 1
+  Interval: 0
+  Timeout: 10000
+  FastResend: 2
+  CongestionWindow: 0
+  SendWindowSize: 4096
+  ReceiveWindowSize: 4096
+  MaxRetransmit: 40
+  NonAlloc: 1
+  ReliableMaxMessageSize: 298449
+  UnreliableMaxMessageSize: 1199
+  debugLog: 0
+  statisticsGUI: 0
+  statisticsLog: 0
+--- !u!114 &5822997659169558382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822997659169558378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6f89a1cfdd40c4dab9a9370c29d208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleKey: 96
+  openOnStart: 0
+  shakeToOpen: 1
+  shakeRequiresTouch: 0
+  shakeAcceleration: 3
+  toggleThresholdSeconds: 0.5
+  restrictLogCount: 0
+  maxLogCount: 1000
+  logFontSize: 12
+  scaleFactor: 1
+--- !u!114 &5822997659169558383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822997659169558378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b979f26c95d34324ba005bfacfa9c4fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

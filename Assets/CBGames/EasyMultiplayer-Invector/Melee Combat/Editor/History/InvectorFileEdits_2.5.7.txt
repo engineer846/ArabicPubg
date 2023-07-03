@@ -1,0 +1,100 @@
+vItemManagerEditor.cs
+* [CustomEditor(typeof(vItemManager))] -> [CustomEditor(typeof(vItemManager), true)]
+
+vItemManager.cs
+* IEnumerator Start() -> protected virtual IEnumerator Start()
+* private Animator animator; -> protected Animator animator;
+
+* vItemCollectionDisplay.cs
+* public void FadeText(string message, float timeToStay, float timeToFadeOut) -> public virtual void FadeText(string message, float timeToStay, float timeToFadeOut)
+
+vCheckCanAddHealth.cs
+* + using Mirror;
+* if (itemManager) -> if (itemManager && ((itemManager.gameObject.GetComponent<NetworkIdentity>().hasAuthority && NetworkClient.active) || (!NetworkClient.active && !NetworkServer.active)))
+
+vBreakableObject
+* IEnumerator BreakObjet() -> protected virtual IEnumerator BreakObjet()
+* private Rigidbody _rigidBody; -> protected Rigidbody _rigidBody;
+* private Collider _collider; -> protected Collider _collider;
+* private bool isBroken; -> protected bool isBroken;
+
+vLockOnBehaviour.cs
+* + protected Transform _target;
+* protected Transform target; -> protected virtual Transform target { get { return _target; } set { _target = value; } }
+* private bool _inLockOn; -> protected bool _inLockOn;
+
+* v_AIMotor.cs
+* + protected Vector3 _targetPos;
+* protected Vector3 targetPos; -> protected virtual Vector3 targetPos { get { return _targetPos; } set { _targetPos = value; } }
+* + protected bool _canSeeTarget;
+* protected bool canSeeTarget; -> protected virtual bool canSeeTarget { get { return _canSeeTarget; } set { _canSeeTarget = value; } }
+* + protected Vector3 _destination;
+* protected Vector3 destination; ->  protected virtual Vector3 destination { get { return _destination; } set { _destination = value; } }
+* + protected Vector3 _fwd;
+* protected Vector3 fwd; -> protected virtual Vector3 fwd { get { return _fwd; } set { _fwd = value; } }
+* + protected bool _isGrounded;
+* protected bool isGrounded; -> protected virtual bool isGrounded { get { return _isGrounded; } set { _isGrounded = value; } }
+* + protected bool _isStrafing;
+* protected bool isStrafing; -> protected virtual bool isStrafing { get { return _isStrafing; } set { _isStrafing = value; } }
+* + protected int _currentWaypoint;
+* protected int currentWaypoint; -> protected virtual int currentWaypoint { get { return _currentWaypoint; } set { _currentWaypoint = value; } }
+* + protected int _currentPatrolPoint;
+* protected int currentPatrolPoint; -> protected virtual int currentPatrolPoint { get { return _currentPatrolPoint; } set { _currentPatrolPoint = value; } }
+* + protected float _direction;
+* + protected float _timer, _wait;
+* + protected float _fovAngle;
+* protected float direction; -> protected virtual float direction { get { return _direction; } set { _direction = value; } }
+* - protected float timer, wait;
+* + protected virtual float timer { get { return _timer; } set { _timer = value; } }
+* + protected virtual float wait { get { return _wait; } set { _wait = value; } }
+* protected float fovAngle; -> protected virtual float fovAngle { get { return _fovAngle; } set { _fovAngle = value; } }
+* + protected Vector3 _startPosition;
+* protected Vector3 startPosition; -> protected virtual Vector3 startPosition { get { return _startPosition; } set { _startPosition = value; } }
+* - protected bool
+           isCrouched,
+           canAttack,
+           tryingBlock,
+           isRolling;
+* + protected bool _isCrouched;
+* + protected bool _canAttack;
+* + protected bool _tryingBlock;
+* + protected bool _isRolling;
+* + protected virtual bool isCrouched { get { return _isCrouched; } set { _isCrouched = value; } }
+* + protected virtual bool canAttack { get { return _canAttack; } set { _canAttack = value; } }
+* + protected virtual bool tryingBlock { get { return _tryingBlock; } set { _tryingBlock = value; } }
+* + protected virtual bool isRolling { get { return _isRolling; } set { _isRolling = value; } }
+* + protected bool _canAttack;
+* + protected bool _tryingBlock;
+* + protected bool _isRolling;
+* + protected bool _isBlocking;
+* + protected bool _isAttacking;
+* public bool isBlocking { get; protected set; } -> public virtual bool isBlocking { get { return _isBlocking; } protected set { _isBlocking = value; } }
+* public bool isAttacking { get; protected set; } -> public bool isAttacking { get { return _isAttacking; } protected set { _isAttacking = value; } }
+* + protected AIStates _currentState = AIStates.PatrolWaypoints;
+* public AIStates currentState = AIStates.PatrolWaypoints; -> public virtual AIStates currentState { get { return _currentState; } set { _currentState = value; } }
+* + protected bool _actions;
+* public bool actions; -> public virtual bool actions { get { return _actions; } set { _actions = value; } }
+
+v_AIController.cs
+* + protected Vector3 _moveToDestination;
+* protected Vector3 moveToDestination; -> protected virtual Vector3 moveToDestination { get { return _moveToDestination; } set { _moveToDestination = value; } }
+* + protected float _moveToSpeed;
+* protected float moveToSpeed; -> protected virtual float moveToSpeed { get { return _moveToSpeed; } set { _moveToSpeed = value; } }
+* protected IEnumerator MeleeAttackRotine() -> protected virtual IEnumerator MeleeAttackRotine()
+
+vItemSlot.cs
+* private void UpdateDisplays(vItem item) -> protected virtual void UpdateDisplays(vItem item)
+
+vEventWithDelay.cs
+* private void Start() -> protected virtual void Start()
+* public void DoEvents() -> public virtual void DoEvents()
+* public void DoEvent(int index) -> public virtual void DoEvent(int index)
+* public void DoEvent(string name) -> public virtual void DoEvent(string name)
+
+vFadeCanvas.cs
+* private void Start() -> protected virtual void Start()
+* public void FadeIn() -> public virtual void FadeIn()
+* public void FadeOut() -> public virtual void FadeOut()
+* public void AlphaFull() -> public virtual void AlphaFull()
+* public void AlphaZero() -> public virtual void AlphaZero()
+* private void InitilizeFadeEffect() -> protected virtual void InitilizeFadeEffect()

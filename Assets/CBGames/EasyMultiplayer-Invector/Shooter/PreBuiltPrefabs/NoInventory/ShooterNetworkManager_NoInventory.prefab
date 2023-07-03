@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1269649711917965864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1269649711917965871}
+  - component: {fileID: 1269649711917965870}
+  - component: {fileID: 1269649711917965865}
+  - component: {fileID: 1269649711917965868}
+  - component: {fileID: 1269649711917965869}
+  m_Layer: 0
+  m_Name: ShooterNetworkManager_NoInventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1269649711917965871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269649711917965864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1269649711917965870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269649711917965864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e740c2ef75c1e124d828339f118c76da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  PersistNetworkManagerToOfflineScene: 0
+  runInBackground: 1
+  autoStartServerBuild: 1
+  serverTickRate: 60
+  offlineScene: 
+  onlineScene: 
+  transport: {fileID: 1269649711917965865}
+  networkAddress: localhost
+  maxConnections: 100
+  disconnectInactiveConnections: 0
+  disconnectInactiveTimeout: 60
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 5243104548622015552, guid: d52a8dc35176d82489fb5eca183909ac,
+    type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
+  spawnPrefabs:
+  - {fileID: 1191598618198421314, guid: e4b2de2efba519145b67e9739b2f774f, type: 3}
+  - {fileID: 3918742209365246746, guid: a1b037655fb3c6b4590bd87f765e92c2, type: 3}
+  - {fileID: 2550696991053091519, guid: 9e54533b7d3c6034393f41c17d068f60, type: 3}
+  - {fileID: 5756362354615751860, guid: b3e529e736c2ff54198f693103a81e55, type: 3}
+  - {fileID: 2365675299871551641, guid: c5baa1a214628ce48becf46cf6c15f74, type: 3}
+  - {fileID: 147290899720992283, guid: a694fc534feebb04d9a1c2f038f9c335, type: 3}
+  - {fileID: 4641007207510108486, guid: 5d43446ec2fc81b49b45fa608d8d7a60, type: 3}
+  - {fileID: 3574457727858941126, guid: 3d6f2959ce11c6247ba0e9d8b0f67985, type: 3}
+  - {fileID: 8477310231948383399, guid: 1b0e85507c6f0694c8b5e367f30afe6f, type: 3}
+  - {fileID: 3277086593381509906, guid: d6b925e6d440ebd42b9c7c534f4f3524, type: 3}
+  - {fileID: 3588057687352270044, guid: 717907f3674ac0249912a05399f50700, type: 3}
+  - {fileID: 8929916948824206205, guid: aef679defbe7f7249885e7771c6f9ef7, type: 3}
+  - {fileID: 8774512247203213870, guid: bbbd4acfd2679f94ba3bfa2baba0b2da, type: 3}
+  - {fileID: 63956777362951506, guid: 4e5607722bde0d9408a63570283b9e8c, type: 3}
+  - {fileID: 256434410707906597, guid: 77e92df14609be740a6edc03f6410f36, type: 3}
+  - {fileID: 8021327343680223499, guid: 6f3428a5e8e0b6f45bed34a1d6dfaee8, type: 3}
+  - {fileID: 3657079110822364361, guid: ab7556920b9019a4d8260d6a4cc3bead, type: 3}
+  - {fileID: 6527148630611174179, guid: db0cd17a4c35f9d4f9342d02b81de279, type: 3}
+  - {fileID: 5386859598085861810, guid: e352bb5abe11d894689fd0b13cfd2176, type: 3}
+  characterToSpawn: {fileID: 1191598618198421314, guid: e4b2de2efba519145b67e9739b2f774f,
+    type: 3}
+  _teams: {fileID: 11400000, guid: 71e5e5036753a794abad747fd2411ed1, type: 2}
+  characterTeam: blue
+  autoSpawnCharacter: 1
+  debugWindow: 1
+  verboseLogging: 0
+  additivelyLoadScenesOnJoin: []
+  moveToSceneOnJoin: Assets/CBGames/EasyMultiplayer-Invector/Shooter/Scenes/ExampleScenes/MP_Invector_ShooterMelee_NOInventory.unity
+  jumpToPointName: StartingJumpToPoint
+--- !u!114 &1269649711917965865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269649711917965864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Port: 7777
+  DualMode: 1
+  NoDelay: 1
+  Interval: 0
+  Timeout: 10000
+  FastResend: 2
+  CongestionWindow: 0
+  SendWindowSize: 4096
+  ReceiveWindowSize: 4096
+  NonAlloc: 1
+  debugLog: 0
+  statisticsGUI: 0
+  statisticsLog: 0
+--- !u!114 &1269649711917965868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269649711917965864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6f89a1cfdd40c4dab9a9370c29d208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleKey: 96
+  openOnStart: 0
+  shakeToOpen: 1
+  shakeRequiresTouch: 0
+  shakeAcceleration: 3
+  toggleThresholdSeconds: 0.5
+  restrictLogCount: 0
+  maxLogCount: 1000
+  logFontSize: 12
+  scaleFactor: 1
+--- !u!114 &1269649711917965869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269649711917965864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b979f26c95d34324ba005bfacfa9c4fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

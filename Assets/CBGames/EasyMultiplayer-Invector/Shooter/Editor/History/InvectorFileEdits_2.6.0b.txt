@@ -1,0 +1,57 @@
+vThrowCollectable.cs
+* private void OnTriggerEnter(Collider other) -> protected virtual void OnTriggerEnter(Collider other)
+* public void UpdateThrowObj(Rigidbody throwObj) -> public virtual void UpdateThrowObj(Rigidbody throwObj)
+* vThrowManager throwManager; -> protected vThrowManager throwManager;
+
+vThrowManager.cs
+* IEnumerator Start() -> protected virtual IEnumerator Start()
+* private void MoveAndRotate() -> protected virtual void MoveAndRotate()
+* private bool isAiming; -> protected bool isAiming;
+* private bool inThrow; -> protected bool inThrow;
+* vThirdPersonInput tpInput; -> protected vThirdPersonInput tpInput;
+* Vector3 thirdPersonAimPoint -> protected virtual Vector3 thirdPersonAimPoint
+* Vector3 topdownAimPoint -> protected Vector3 topdownAimPoint
+* Vector3 sideScrollAimPoint -> protected virtual Vector3 sideScrollAimPoint
+* + [SerializeField] protected int _currentThrowObject = 1;
+* public int currentThrowObject; -> public virtual int currentThrowObject { get { return _currentThrowObject; } set { _currentThrowObject = value; } }
+* + [SerializeField] protected int _maxThrowObjects = 6;
+* public int maxThrowObjects = 6; -> public virtual int maxThrowObjects { get { return _maxThrowObjects; } set { _maxThrowObjects = value; } }
+* void DrawTrajectory() -> protected virtual void DrawTrajectory()
+* private bool isThrowInput; -> protected bool isThrowInput;
+
+vShooterWeaponBase.cs
+* + protected int _ammo;
+* public int ammo; -> public virtual int ammo { get { return _ammo; } set { _ammo = value; } }
+* [Tooltip("Frequency of shots")] -> [SerializeField, Tooltip("Frequency of shots")]
+* protected float _shootFrequency;
+* public float shootFrequency; -> public virtual float shootFrequency { get { return _shootFrequency; } set { _shootFrequency = value; } }
+* [UnityEngine.Serialization.FormerlySerializedAs("DropOffStart")] -> [SerializeField, UnityEngine.Serialization.FormerlySerializedAs("DropOffStart")]
+* + protected float _minDamageDistance = 8f;
+* public float minDamageDistance = 8f; -> public virtual float minDamageDistance { get { return _minDamageDistance; } set { _minDamageDistance = value; } }
+* [UnityEngine.Serialization.FormerlySerializedAs("DropOffEnd")] -> [SerializeField, UnityEngine.Serialization.FormerlySerializedAs("DropOffEnd")]
+* + protected float _maxDamageDistance = 50f; 
+* public float maxDamageDistance = 50f; -> public virtual float maxDamageDistance { get { return _maxDamageDistance; } set { _maxDamageDistance = value; } }
+* [Tooltip("Minimum damage caused by the shot, regardless the distance")] -> [SerializeField, Tooltip("Minimum damage caused by the shot, regardless the distance")]
+* + protected int _minDamage;
+* public int minDamage; -> public virtual int minDamage { get { return _minDamage; } set { _minDamage = value; } }
+* [Tooltip("Maximum damage caused by the close shot")] -> [SerializeField, Tooltip("Maximum damage caused by the close shot")]
+* + protected int _maxDamage;
+* public int maxDamage; -> public virtual int maxDamage { get { return _maxDamage; } set { _maxDamage = value; } }
+
+vShooterMeleeInput.cs
+* + protected bool _isUsingScopeView;
+* protected bool isUsingScopeView; -> protected virtual bool isUsingScopeView { get { return _isUsingScopeView; } set { _isUsingScopeView = value; } }
+* Debug.LogWarning("Missing the AimCanvas, drag and drop the prefab to this scene in order to Aim", gameObject); -> //Debug.LogWarning("Missing the AimCanvas, drag and drop the prefab to this scene in order to Aim", gameObject);
+
+vShooterWeapon.cs
+* [Tooltip("Max clip size of your weapon")] -> [SerializeField, Tooltip("Max clip size of your weapon")]
+* + protected int _clipSize;
+* public int clipSize; -> public virtual int clipSize { get { return _clipSize; } set { _clipSize = value; } }
+
+vControlAimCanvas.cs
+* protected UnityEvent onEnableScopeCamera { get { return currentAimCanvas.onEnableScopeCamera; } } -> public UnityEvent onEnableScopeCamera { get { return currentAimCanvas.onEnableScopeCamera; } }
+* protected UnityEvent onDisableScopeCamera { get { return currentAimCanvas.onDisableScopeCamera; } } -> public UnityEvent onDisableScopeCamera { get { return currentAimCanvas.onDisableScopeCamera; } }
+
+vExplosive.cs
+* private List<GameObject> collidersReached; -> protected List<GameObject> collidersReached;
+* private float GetPercentageForce(float distance, float value) -> protected float GetPercentageForce(float distance, float value)
