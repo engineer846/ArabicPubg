@@ -1,0 +1,50 @@
+vCharacter:
+* public bool ragdolled { get; set; } -> public virtual bool ragdolled { get { return _ragdolled; } set { _ragdolled = value; }
+* + public bool _ragdolled = false;
+
+vThirdPersonInput:
+* public Camera cameraMain -> public virtual Camera cameraMain
+* private bool _toogleWalk; -> protected bool _toogleWalk;
+* public KeyCode toggleWalk = KeyCode.CapsLock; -> null
+
+vHeadTrack
+* Vector3 GetLookPoint() -> protected virtual Vector3 GetLookPoint()
+* private Animator animator; -> protected Animator animator;
+* bool lookConditions -> protected bool lookConditions
+* private float temporaryLookTime; -> protected float temporaryLookTime;
+* Vector3 headPoint { get { return transform.position + (transform.up * headHeight); } } -> protected Vector3 headPoint { get { return transform.position + (transform.up * headHeight); } }
+* private Transform simpleTarget; -> protected Transform simpleTarget;
+* bool TargetIsOnRange(Vector3 direction) -> protected bool TargetIsOnRange(Vector3 direction)
+* private Vector3 temporaryLookPoint; -> protected Vector3 temporaryLookPoint;
+* Vector2 GetTargetAngle(Vector3 direction) -> protected Vector2 GetTargetAngle(Vector3 direction)
+* void SmoothValues(float _headWeight = 0, float _bodyWeight = 0, float _x = 0, float _y = 0) -> protected void SmoothValues(float _headWeight = 0, float _bodyWeight = 0, float _x = 0, float _y = 0)
+* void SortTargets() -> protected void SortTargets()
+* private float yRotation, xRotation; -> protected float yRotation, xRotation;
+
+vGenericAction
+* private void HandleColliders() -> protected virtual void HandleColliders()
+* private void TriggerActionEventsInput() -> protected virtual void TriggerActionEventsInput()
+* private void CancelButtonTimer() -> protected virtual void CancelButtonTimer()
+* [vReadOnly] public vTriggerGenericAction triggerAction; -> public virtual vTriggerGenericAction triggerAction { get { return _triggerAction; } set { _triggerAction = value; }
+* + [vReadOnly] protected vTriggerGenericAction _triggerAction;
+* protected vTriggerGenericAction GetNearAction() -> protected virtual vTriggerGenericAction GetNearAction()
+
+vTutorialTextTrigger
+* private void OnTriggerEnter(Collider other) -> protected virtual void OnTriggerEnter(Collider other)
+* private void OnTriggerExit(Collider other) -> protected virtual void OnTriggerExit(Collider other)
+
+vHealthController
+* public float currentHealth -> public virtual float currentHealth
+* + protected float _currentHealthRecoveryDelay
+* public float currentHealthRecoveryDelay; -> public virtual float currentHealthRecoveryDelay { get { return _currentHealthRecoveryDelay;  } set { _currentHealthRecoveryDelay = value; } }
+* public bool isDead -> public virtual bool isDead
+* public int MaxHealth -> public virtual int MaxHealth
+* + [SerializeField] protected float _healthRecovery = 0;
+* public float healthRecovery = 0f; -> public virtual float healthRecovery { get { return _healthRecovery; } set { _healthRecovery = value; } }
+
+vThirdPersonMotor
+* public bool isStrafing -> public virtual bool isStrafing
+
+vThirdPersonCamera
+* + internal float _switchRight;
+* internal float switchRight; -> internal virtual float switchRight { get { return _switchRight; } set { _switchRight = value; } }
