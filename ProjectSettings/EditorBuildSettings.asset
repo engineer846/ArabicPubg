@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/CBGames/EasyMultiplayer-Invector/Melee Combat/Scenes/MAIN_MeleeCombat_NoInventory.unity
+    guid: 7f2ae6ae1398d764db525c7ab0a90a9f
+  - enabled: 1
+    path: Assets/CBGames/EasyMultiplayer-Invector/Melee Combat/Scenes/Example Scenes/MP_Invector_MeleeCombat_NoInventory.unity
+    guid: aa04bb4f595051148a450af9f75eea67
+  m_configObjects: {}
